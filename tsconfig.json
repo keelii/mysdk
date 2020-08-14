@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["es6", "dom", "es2017"],
+    "declaration": true,
+    "outDir": "./build",
+    "strict": true,
+    "allowUmdGlobalAccess": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "mysdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "proc:rm_ext": "deno_ext remove src/*.ts",
+    "proc:rs_ext": "deno_ext restore src/*.ts",
+    "tsc": "tsc -m esnext -t ES5 --outDir build/esm",
+    "build": "npm run proc:rm_ext && npm run tsc && npm run proc:rs_ext",
+    "rollup:umd": "./node_modules/.bin/rollup build/esm/index.js --file build/umd/index.bundle.js --format umd --name 'MySDK'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^2.25.0"
+  }
+}
